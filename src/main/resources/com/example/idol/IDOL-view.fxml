@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="636.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.idol.IDOLController">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="0.0" />
+    </padding>
+   <MenuBar VBox.vgrow="ALWAYS">
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+             <MenuItem onAction="#onImportClick" text="Import" />
+             <MenuItem mnemonicParsing="false" onAction="#onExportClick" text="Export" />
+               <MenuItem mnemonicParsing="false" onAction="#onNewImageClick" text="New File" />
+         </items>
+       </Menu>
+       <Menu mnemonicParsing="false" text="Edit">
+         <items>
+               <MenuItem mnemonicParsing="false" onAction="#onAddTextClick" text="Add Text" />
+               <MenuItem mnemonicParsing="false" onAction="#OnSharpClick" text="Sharpen" />
+               <MenuItem mnemonicParsing="false" onAction="#onBlurredButtonClick" text="Blur" />
+                <MenuItem mnemonicParsing="false" onAction="#onChangeHue" text="Hue" />
+               <MenuItem mnemonicParsing="false" onAction="#onUndo" text="Undo" />
+               <MenuItem mnemonicParsing="false" onAction="#onRedo" text="Redo" />
+               <MenuItem mnemonicParsing="false" onAction="#onCropCLick" text="Crop" />
+               <MenuItem mnemonicParsing="false" onAction="#onChangeColour" text="B&amp;W" />
+               <MenuItem mnemonicParsing="false" onAction="#onBorder" text="Add border" />
+             <MenuItem mnemonicParsing="false" onAction="#onDraw" text="Draw" />
+
+         </items>
+       </Menu>
+         <Menu mnemonicParsing="false" text="Flip/invert">
+            <items>
+               <MenuItem onAction="#onHorizontalFlipClick" text="Horizontal flip" />
+               <MenuItem onAction="#onVerticalFLipClick" text="Vertical flip" />
+               <MenuItem onAction="#onInvertClick" text="Invert Colours" />
+            </items>
+         </Menu>
+         <Menu mnemonicParsing="false" text="Rotate">
+            <items>
+               <MenuItem onAction="#onClockwiseRotateClick" text="90* clockwise" />
+               <MenuItem mnemonicParsing="false" onAction="#onCounterClockwiseRotateClick" text="90* counter-clockwise" />
+            </items>
+         </Menu>
+         <Menu mnemonicParsing="false" text="Help">
+            <items>
+               <MenuItem onAction="#onAboutClick" text="About" />
+            </items>
+         </Menu>
+     </menus>
+   </MenuBar>
+   <ImageView fx:id="myImage" fitHeight="561.0" fitWidth="626.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+      <VBox.margin>
+         <Insets top="60.0" />
+      </VBox.margin></ImageView>
+</VBox>
